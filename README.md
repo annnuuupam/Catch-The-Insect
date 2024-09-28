@@ -58,5 +58,6 @@ Future Enhancements:
 
 
 Enjoy playing Catch The Insect and see how many you can catch! 🕹️
+
 Live Demo
 You can play the game here: https://annnuuupam.github.io/Catch-The-Insect/
