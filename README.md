@@ -57,4 +57,4 @@ Future Enhancements:
 *Add sound effects and background music to enhance the game experience.
 
 
-                                                                                      Enjoy playing Catch The Insect and see how many you can catch! 🕹️
+Enjoy playing Catch The Insect and see how many you can catch! 🕹️
