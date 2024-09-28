@@ -56,5 +56,8 @@ Future Enhancements:
 
 *Add sound effects and background music to enhance the game experience.
 
+Live Demo
+You can play the game here: Catch The Insect Live Demo
+
 
 Enjoy playing Catch The Insect and see how many you can catch! 🕹️
