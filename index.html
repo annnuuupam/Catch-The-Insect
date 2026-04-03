@@ -9,7 +9,19 @@
   <body>
     <div class="screen">
       <h1>Catch The Insect</h1>
-      <button class="btn" id="start-btn">Play Game</button>
+      <button class="btn" id="start-btn" style="margin-bottom: 20px;">Play Game</button>
+      <button class="btn" id="rules-btn" style="background-color: transparent; border: 1px solid rgba(255,255,255,0.5);">How to Play</button>
+    </div>
+
+    <div id="rules-modal" class="message">
+      <h2>How to Play 📜</h2>
+      <ul style="text-align: left; font-size: 14px; line-height: 2; margin-bottom: 20px;">
+          <li>⏱️ <b>60 Seconds:</b> Catch as many as possible!</li>
+          <li>🏆 <b>Level Up:</b> Score points to increase difficulty.</li>
+          <li>✨ <b>Golden Bug:</b> Catch them for <b>+5 Points</b>!</li>
+          <li>⏸️ <b>Pause:</b> Press <b>'P'</b> or <b>Spacebar</b> to pause.</li>
+      </ul>
+      <button class="btn" id="close-rules-btn">Got it!</button>
     </div>
     <div class="screen">
       <h1>What is your "favorite" insect?</h1>
@@ -53,12 +65,16 @@
       </ul>
     </div>
     <div class="screen game-container" id="game-container">
-      <h3 id="time" class="time">Time: 00:00</h3>
-      <h3 id="score" class="score">Score: 0</h3>
-      <h5 id="message" class="message">
-        Are you annnoyed yet? <br />
-        You are playing an impossible game!!
-      </h5>
+      <h3 id="time" class="time">Time: 60</h3>
+      <div class="scores-container">
+        <h3 id="score" class="score">Score: 0</h3>
+        <h5 id="high-score" class="high-score">Best: 0</h5>
+      </div>
+      <div id="message" class="message">
+        <h2>Time's Up!</h2>
+        <p>You caught <span id="final-score">0</span> bugs.</p>
+        <button class="btn" id="restart-btn" style="margin-top: 20px;">Play Again</button>
+      </div>
     </div>
     <script src="script.js"></script>
   </body>

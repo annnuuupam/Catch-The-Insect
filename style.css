@@ -5,14 +5,17 @@
 }
 
 body {
-  background-color: #516dff;
+  background-color: #2a5298; /* Solid Fallback */
+  background-image: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #ee7752 100%);
   color: #fff;
+  font-family: inherit;
   font-family: "Press Start 2P", sans-serif;
   height: 100vh;
   overflow: hidden;
   margin: 0;
   text-align: center;
 }
+
 
 a {
   color: #fff;
@@ -22,17 +25,30 @@ h1 {
   line-height: 1.4;
 }
 
+h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
 .btn {
   border: 0;
-  background-color: #fff;
-  color: #516dff;
-  padding: 15px 20px;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: #fff;
+  padding: 15px 30px;
   font-family: inherit;
   cursor: pointer;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
 
 .btn:hover {
-  opacity: 0.9;
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 .btn:focus {
@@ -66,65 +82,100 @@ h1 {
 }
 
 .choose-insect-btn {
-  background-color: transparent;
-  border: 2px solid #fff;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
   color: #fff;
   cursor: pointer;
   font-family: inherit;
   width: 150px;
   height: 150px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .choose-insect-btn:hover {
-  background-color: #fff;
-  color: #516dff;
+  background-color: rgba(255, 255, 255, 0.25);
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  border-color: rgba(255, 255, 255, 0.5);
+  color: #a8e063;
 }
 
 .choose-insect-btn:active {
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.4);
+  transform: translateY(0);
 }
 
 .choose-insect-btn img {
-  width: 100px;
-  height: 100px;
+  width: 90px;
+  height: 90px;
   object-fit: contain;
+  margin-top: 10px;
 }
 
 .game-container {
   position: relative;
+  cursor: crosshair; 
 }
 
 .time,
-.score {
+.scores-container {
   position: absolute;
   top: 20px;
+  font-size: 16px;
 }
 
 .time {
   left: 20px;
 }
 
-.score {
+.scores-container {
   right: 20px;
+  text-align: right;
+  z-index: 10;
+}
+
+.score {
+  margin: 0;
+}
+
+.high-score {
+  margin: 5px 0 0 0;
+  color: #a8e063;
 }
 
 .message {
   line-height: 1.7;
-  background-color: rgba(0, 0, 0, 0.5);
-  width: 100%;
-  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  width: 80%;
+  max-width: 500px;
+  padding: 40px;
   z-index: 100;
   text-align: center;
   opacity: 0;
+  pointer-events: none;
   position: absolute;
-  top: 0;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -150%);
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.4s ease-in;
 }
 
 .message.visible {
-  transform: translate(-50%, 150%);
+  transform: translate(-50%, -50%);
   opacity: 1;
+  pointer-events: auto;
 }
 
 .insect {
@@ -135,15 +186,34 @@ h1 {
   height: 100px;
   position: absolute;
   transform: translate(-50%, -50%) scale(1);
-  transition: transform 0.3s ease-in-out;
-  cursor: pointer;
+  transition: transform 0.3s ease-in-out, filter 0.3s ease, opacity 0.3s ease;
+  cursor: crosshair;
 }
 
 .insect img {
   width: 100px;
   height: 100px;
+  user-select: none;
 }
 
 .insect.caught {
-  transform: translate(-50%, -50%) scale(0);
+  transform: translate(-50%, -50%) scale(0.6) rotate(45deg);
+  opacity: 0;
+  filter: sepia(1) hue-rotate(-50deg) saturate(5);
+  pointer-events: none;
+}
+
+.insect.golden {
+  animation: pulse 1s infinite alternate;
+}
+
+@keyframes pulse {
+  from {
+    transform: translate(-50%, -50%) scale(1);
+    filter: drop-shadow(0 0 5px gold);
+  }
+  to {
+    transform: translate(-50%, -50%) scale(1.1);
+    filter: drop-shadow(0 0 15px gold);
+  }
 }
