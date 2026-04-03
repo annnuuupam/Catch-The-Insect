@@ -1,4 +1,4 @@
-# 🕹️ Catch The Insect v2
+# 🕹️ Catch The Insect
 
 **Catch The Insect** is a fast-paced, interactive web game where you can challenge yourself to catch various virtual insects as they frantically appear on your screen. Choose your "favorite" bug, test your reflexes against the clock, and see if you can achieve a new High Score!
 
@@ -45,8 +45,7 @@ In this fully revamped version, you are racing against a strict 60-second timer.
 
 ## 🎉 Try it Now!
 
-- 🌟 **V2 (Latest Version)**: [Play Catch The Insect](https://catch-the-insect-tau.vercel.app/)
-- 🕰️ **V1 (Legacy Version)**: [Play Original Version](https://annnuuupam.github.io/Catch-The-Insect/)
+- 🕰️ **Latest Version**: [Play Original Version](https://annnuuupam.github.io/Catch-The-Insect/)
 
 ---
 
