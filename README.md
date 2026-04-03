@@ -45,8 +45,8 @@ In this fully revamped version, you are racing against a strict 60-second timer.
 
 ## 🎉 Try it Now!
 
-**Live Demo**: [Catch The Insect (Legacy Version)](https://annnuuupam.github.io/Catch-The-Insect/) 
-*(Note: Live demo links to the legacy version layout. Download the repository files to test the cutting-edge v2 features locally!)*
+- 🌟 **V2 (Latest Version)**: [Play Catch The Insect](https://catch-the-insect-tau.vercel.app/)
+- 🕰️ **V1 (Legacy Version)**: [Play Original Version](https://annnuuupam.github.io/Catch-The-Insect/)
 
 ---
 
