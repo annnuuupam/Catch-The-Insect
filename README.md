@@ -45,7 +45,7 @@ In this fully revamped version, you are racing against a strict 60-second timer.
 
 ## 🎉 Try it Now!
 
-- 🕰️ **Latest Version**: [Play Original Version](https://annnuuupam.github.io/Catch-The-Insect/)
+- 🕰️ **Latest Version**: [Play](https://annnuuupam.github.io/Catch-The-Insect/)
 
 ---
 
